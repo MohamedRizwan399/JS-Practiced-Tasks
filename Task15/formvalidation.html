@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="formvalidation.css"/>
+    <script type="text/javascript" src="formvalidation.js">
+        </script>
+</head>
+
+<body  style="background-color: aqua;">
+    
+    <div class="header">
+        <div class="inner_header">
+            
+                <img src="/home/user/Pictures/contus.png"
+                width="200"
+                height="50">
+            
+
+            
+
+        </div>
+    </div>
+<form>
+    <div class="content" id="content">
+    <h2 class="title" ><u>EMPLOYEE REGISTRATION FORM</u></h2>
+    
+    <span id="name-error"></span><br>
+    Name &nbsp; <input type="text" id="name" value="">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+     Your Name is: <b><text id="nameresult"></text></b><br><br>
+
+     <span id="age-error" style="color: red;"></span><br>
+    Age &nbsp; <input type="number" id="age" value="" >&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    Age is: <b><text id="ageresult"></text></b><br><br>
+
+
+    <!-- Gender &nbsp; <input type="radio" id="male" value="" name="radio1">male
+    <input type="radio" id="female" value="" name="radio1">female &emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    Gender: <b><text id="genderresult"></text></b><br><br> -->
+    <span id="gender-error" style="color: red;"></span><br>
+    Gender &nbsp;
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male">Male</label>
+ 
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female">Female</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+    Your Gender is :<b><text id="genderresult"></text></b><br><br>
+
+
+    <span id="address-error" style="color: red;"></span><br>
+    Address: &nbsp; <Address ><textarea name="address" id="address" value=""
+    rows="3" cols="20"></textarea></Address>&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    Your Address: <b><text id="addressresult"></text></b><br><br>
+
+
+    <span id="dept-error" style="color: red;"></span><br>
+    Department: &nbsp;<br><input type="checkbox" id="myCheck1" value="Dev team"> Dev team 
+    <input type="checkbox" id="myCheck2" value="QA team"> QA team
+    <input type="checkbox" id="myCheck3" value="HR team"> HR team
+    <input type="checkbox" id="myCheck4" value="Admin team"> Admin team
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+
+    DEPARTMENT : <b><text id="deptresult"></text></b><br><br>
+
+    <span id="role-error" style="color: red;"></span><br>
+    Designation/Role: &nbsp; <select id="select" >
+        <option></option>
+        <option>Jr.Soft Engineer</option>
+        <option>Test Engineer</option>
+        <option>Network Engineer</option>
+        <option>Java Developer</option>
+        <option>Web Developer</option>
+    </select>    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+
+    Role : <b><text id="selectresult"></text></b><br><br>
+
+    <span id="fsd-error" style="color: red;"></span><br>
+    <h4 class="question1" >Are you a FullStack developer?</h4>
+        <input type="radio" id="yes" name="FSD" value="Yes">
+        <label for="yes">YES</label>
+ 
+        <input type="radio" id="no" name="FSD" value="No">
+        <label for="no">NO</label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+        FullStackDeveloper : <b><text id="fsdresult"></text></b><br><br>
+
+
+
+    <input type="button" name="submit" id="submit" onclick="ShowEmployeeDetails()" value="SUBMIT">&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="reset" name="RESET" onclick="removeData()" value="RESET">
+
+
+    
+</div>
+
+
+
+
+
+</body>
+</html>
