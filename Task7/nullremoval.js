@@ -1,7 +1,11 @@
-function removeNullValues(){
-    var arrayValue=[NaN, 0, 15, false, -22, '',undefined, 47, null];
-    var arrayFilter=arrayValue.filter(Boolean);
-    console.log(arrayFilter);
+let originalArr = [NaN, 0, 15, false, -22, '', undefined, 47, null];
 
-    document.getElementById("result").innerHTML="The values are: "+arrayFilter;
+function removeNullValues() {
+    arrayFilter = originalArr.filter(Boolean);
+    console.log(arrayFilter);
+    document.getElementById("result").innerHTML = "The values are: "+arrayFilter;
 }
+
+window.onload = function () {
+    document.getElementById("originalArr").innerHTML += originalArr;
+};
