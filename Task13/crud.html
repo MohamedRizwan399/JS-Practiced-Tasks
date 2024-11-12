@@ -1,109 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crud Operations</title>
-    <script type="text/javascript" src="crud.js"></script>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crud Operations</title>
+        <script type="text/javascript" src="crud.js"></script>
+    </head>
+    <body style="background-color: teal;">
+        <h3> CRUD Operations </h3>
+        <div class="employee-form" >
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" id="form">
+                <div>
+                    <label>First Name</label><label class="validation-error hide" id="fullNameValidationError"></label>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="firstname" id="firstname" >
+                </div><br>
+                <div>
+                    <label>Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="lastname" id="lastname">
+                </div><br>
+                <div>
+                    <label>Email ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="email" name="email" id="email">
+                </div><br>
+                <div>
+                    <label>City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="text" name="city" id="city">
+                </div><br>
+                <div  class="form-action-buttons">
+                    <input type="submit" value="Submit">
+                </div><br>
+            </form>
+        </div><br/>
 
-</head>
-<body style="background-color: teal;">
-
-    <h3> CRUD Operations </h3>
-	
-			<div class="employee-form" >
-                <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off" id="form">
-                    <div>
-                        <label>First Name</label><label class="validation-error hide" id="fullNameValidationError"></label>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="text" name="firstname" id="firstname" >
-                    </div><br>
-                    <div>
-                        <label>Last Name</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="text" name="lastname" id="lastname">
-                    </div><br>
-                    <div>
-                        <label>Email ID</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="email" name="email" id="email">
-                    </div><br>
-                    <div>
-                        <label>City</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                        <input type="text" name="city" id="city">
-                    </div><br>
-                    <div  class="form-action-buttons">
-                        <input type="submit" value="Submit">
-                    </div>
-                
-                    <br>
-                </form>
-                
-
-		</div>
-		<br/>
-
-    <!-- create table -->
-    <!-- <div class = "employees-table">
-        <table class="list" id="employeeList" hidden="true">
-            <thead>
-                <tr>
-                    <th>First Name&emsp;&emsp;</th>
-                    <th>Last Name&emsp;&emsp;</th>
-                    <th>Email ID&emsp;&emsp;</th>
-                    <th>City&emsp;&emsp;</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                
-            </tbody>
-        </table>
-    </div> -->
-
-    <!-- <script>
-        let localData1=JSON.parse(localStorage.getItem('userData'));
-         
-        
-             for(let i=0;i<localData1.length;i++){
-                 document.write("<tr>")
-                 document.write("<td>")
-                     localData1[i].firstname
-                 document.write("</td>")
-                 document.write("<td>")
-                     localData1[i].lastname
-                 document.write("</td>")
-                 document.write("<td>")
-                     localData1[i].email
-                 document.write("</td>")
-                 document.write("<td>")
-                     localData1[i].city
-                 document.write("</td>")
-                 
-             }
-        
-     </script> -->
-
-    <div class = "employees-table">
-        <table id="employeeList" >
-            <thead>
-                <tr>
-                    <th>First Name&emsp;&emsp;</th>
-                    <th>Last Name&emsp;&emsp;</th>
-                    <th>Email ID&emsp;&emsp;</th>
-                    <th>City&emsp;&emsp;</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody id="tablebody">
-                
-               
-            </tbody>
-        </table>
-    </div>
-    
-    
-
-
-
-</body>
+        <div class = "employees-table">
+            <table id="employeeList" >
+                <thead>
+                    <tr>
+                        <th>First Name&emsp;&emsp;</th>
+                        <th>Last Name&emsp;&emsp;</th>
+                        <th>Email ID&emsp;&emsp;</th>
+                        <th>City&emsp;&emsp;</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tablebody">
+                </tbody>
+            </table>
+        </div>
+    </body>
 </html>

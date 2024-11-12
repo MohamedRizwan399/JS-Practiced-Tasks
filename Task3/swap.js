@@ -1,15 +1,11 @@
-function swapText(){
-    var a=document.getElementById("userinput").value;
-    if(a==""){
+function swapText() {
+    let input = document.getElementById("userinput").value;
+    if (input == "") {
         alert("Please Type something");
-    }else{
-        // console.log(a);
-    const dataLength=a.length;
-    console.log(dataLength);
-
-     var result=a.charAt(dataLength-1)+a.substring(1,dataLength-1)+a.charAt(0);
-
-     document.getElementById("result").innerHTML="Your Result is "+result;
+    } else {
+        const dataLength = input?.length;
+        console.log(dataLength);
+        let result = input.charAt(dataLength-1) + input.substring(1, dataLength - 1) + input.charAt(0);
+        document.getElementById("result").innerHTML = "Your Result is <b>" + result + "</b>";
     }
-    
 }
