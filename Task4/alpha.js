@@ -1,12 +1,11 @@
-function convertAlpha(){
-    var a=document.getElementById("userinput").value;
-    if(a==""){
+function convertAlpha() {
+    let input = document.getElementById("userinput").value;
+    if (input === "") {
         alert("Please Type something");
-    }else{
-        var b=a.toLowerCase();
-        var result=b.split("").sort().join("");
+    } else {
+        let b = input.toLowerCase();
+        let result = b.split("").sort().join("");
         console.log(result);
-
-     document.getElementById("result").innerHTML="Your Result is "+result;
+        document.getElementById("result").innerHTML="Your Result is <b>"+result+ "</b>";
     }
 }

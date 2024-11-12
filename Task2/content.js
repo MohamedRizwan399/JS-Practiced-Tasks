@@ -1,3 +1,3 @@
-function printScreenData(){
+function printScreenData() {
     window.print();
 }
